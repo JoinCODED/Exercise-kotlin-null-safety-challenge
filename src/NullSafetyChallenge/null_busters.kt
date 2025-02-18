@@ -1,10 +1,7 @@
 package NullSafetyChallenge
 
-fun greetUser(name: String?, address: String?) {
-    val introType = if ((name?.length ?: 0) > 0) name
-    else "honored guest!"
-
-    println("Hello, $introType! Welcome to $address")
+val greetUser = { name: String?, address: String? ->
+    println("Hello, ${name?.let { it.trim() } ?: "honored guest" }! Welcome to $address")
 }
 
 

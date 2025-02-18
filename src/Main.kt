@@ -5,7 +5,7 @@ fun main() {
 //    val age: Int = null
     val address: String? = null
 
-    greetUser("Dude!", address ?: "NBK")
+    greetUser(null, address ?: "NBK")
+    greetUser("Yousef ", "CODED")
     println("Area of 2x6: ${calculateArea(2, 6)}")
-
 }
